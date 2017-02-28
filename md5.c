@@ -55,11 +55,10 @@ void md5(const uint8_t *message, size_t msg_len, uint8_t *digest) {
 	uint32_t k[64];
 	for (int i = 0; i < 64; i++){
 		k[i] = floor(
-			fabs(sin((double)i + 1)) * pow((double)2, 32)
+			fabs(sin(i + 1)) * pow((double)2, 32)
 		);
 	}
-    printf("%s","\n");
-
+	
 	uint32_t h0, h1, h2, h3;
 	//Initialize variables:
 	h0 = 0x67452301;
