@@ -54,8 +54,9 @@ void md5(const uint8_t *message, size_t msg_len, uint8_t *digest) {
 	//Use binary integer part of the sines of integers as constants:
 	uint32_t k[64];
 	for (int i = 0; i < 64; i++){
-		k[i] = floor(abs(sin((double)i + 1)) * pow((double)2, 32));
-        printf("%d",pow(2.0,4.0));
+		k[i] = floor(
+			fabs(sin((double)i + 1)) * pow((double)2, 32)
+		);
 	}
     printf("%s","\n");
 
